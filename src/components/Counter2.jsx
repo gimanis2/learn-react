@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const Counter = () => {
+const Counter2 = ({ step }) => {
   //logic
 
   // state라는 특별한 변수 선언(실제 dom에 반영되는 변수 선언)
@@ -36,20 +36,26 @@ const Counter = () => {
   console.log("bird", bird);
 
   const handleIncrease = () => {
-    setCountState(countState + 1);
+    setCountState(countState + step);
     console.log(countState);
   };
 
   const handleDecrease = () => {
-    //setCountState(countState - 1);
-    setCountState((prev) => prev - 1); //prev라는 명칭으로 변수를 가져와서 함수로 구현
+    //setCountState(countState - step);
+    setCountState((prev) => prev - step); //prev라는 명칭으로 변수를 가져와서 함수로 구현
     console.log(countState);
+  };
+
+  const userStep = () => {
+    const step = prompt("숫자 몇칸씩 증가시킬지 입력해주세요");
+    console.log(typeof step); //prompt에서 입력받은 값은 string 임
+    console.log(typeof Number(step)); //number로
   };
 
   //view
   return (
     <div>
-      <h1>Counter</h1>
+      <h1>Counter2</h1>
       <div
         style={{
           fontSize: "40px",
@@ -59,14 +65,14 @@ const Counter = () => {
       </div>
       <div>
         <button type="button" onClick={handleIncrease}>
-          +1
+          +{step}
         </button>
         <button type="button" onClick={handleDecrease}>
-          -1
+          -{step}
         </button>
       </div>
     </div>
   );
 };
 
-export default Counter;
+export default Counter2;

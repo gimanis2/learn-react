@@ -1,8 +1,7 @@
 import React from "react";
 
-const Greeting = () => {
+const Greeting = ({ userName }) => {
   //로직부문(javascript 사용부문)
-  const userName = "장기만";
   const testClass = "text-red";
 
   //VIEW부문
