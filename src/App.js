@@ -6,10 +6,12 @@ function App() {
     <div className="wrap">
       {/* 카드 컴포넌트 호출 */}
       <Greeting />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
+      <div className="card-wrap">
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+      </div>
     </div>
   );
 }

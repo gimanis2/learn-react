@@ -1,4 +1,4 @@
-.wrap {
+.card-wrap {
   display: flex;
   flex-wrap: wrap;
 }
@@ -13,4 +13,8 @@ body {
 
 img {
   width: 100%;
+}
+
+.text-red {
+  color: red;
 }

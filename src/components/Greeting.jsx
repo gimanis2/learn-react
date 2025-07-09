@@ -1,9 +1,16 @@
 import React from "react";
 
 const Greeting = () => {
+  //로직부문(javascript 사용부문)
+  const userName = "장기만";
+  const testClass = "text-red";
+
+  //VIEW부문
   return (
     <div>
-      <h2>안녕하세요 반갑습니다.</h2>
+      <h2 className={`greeting-title ${testClass}`}>
+        안녕하세요 반갑습니다. {userName}님!
+      </h2>
     </div>
   );
 };
